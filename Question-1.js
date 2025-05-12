@@ -112,8 +112,62 @@ console.log(getStringKeys(employees));
 
 // Part A
 
+function checkNumber(num) {
+  var result = "";
+  // Check even or odd
+  if (num % 2 === 0) {
+    result += "Even";
+  } else {
+    result += "Odd";
+  }
 
 
+  // Part B
+  // Check divisibility by 5
+  if (num % 5 === 0) {
+    result += " and divisible by 5";
+  } else {
+    result += " and not divisible by 5";
+  }
+
+  return result;
+}
+
+console.log(checkNumber(10)); 
+console.log(checkNumber(3));  
+console.log(checkNumber(15)); 
+
+
+                // QUESTION 5
+
+
+// Part A
+
+let numbersQn5 =[2,4,3,11,12,20,14,9,0];
+
+function doubleAllValues(arr) {
+  let doubled = [];
+  for (let i = 0; i < arr.length; i++) {
+    doubled.push(arr[i] * 2);
+  }
+  return doubled;
+}
+
+console.log(doubleAllValues(numbersQn5));
 
 
 // Part B
+
+function doubleEvenValues(arr) {
+  let doubled = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      doubled.push(arr[i] * 2);
+    } else {
+      doubled.push(arr[i]); 
+    }
+  }
+  return doubled;
+}
+
+console.log(doubleEvenValues(numbersQn5));
