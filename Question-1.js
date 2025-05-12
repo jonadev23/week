@@ -223,3 +223,154 @@ return results;
 console.log(checkNumberWithObject(numbersQn6));
 
 
+                    // QUESTION 7 - DATES
+                    
+                    
+// Part A
+
+function getCurrentDate() {
+  var today = new Date();
+
+  var year = today.getFullYear();
+  var month = today.getMonth() + 1; 
+  var day = today.getDate();
+
+  return "The date today is " + year + "-" + month + "-" + day;
+}
+
+console.log(getCurrentDate());
+
+
+// Part B
+
+function getCurrentDateTime() {
+  var now = new Date();
+
+  var year = now.getFullYear();
+  var month = now.getMonth() + 1;
+  var day = now.getDate();
+
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+
+  return "The date today is " + year + "-" + month + "-" + day + " and the time is " + hours + ":" + minutes + ":" + seconds;
+}
+
+console.log(getCurrentDateTime());
+
+
+
+                    // QUESTION 8
+                    
+                    
+// Part A
+
+
+var testArray = [3, -2, 5, -7, 0, 8];
+
+
+function removeNegatives(arr) {
+  var result = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] >= 0) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+}
+
+
+console.log(removeNegatives(testArray));
+
+// Part B
+
+
+function cleanArray(arr) {
+  var result = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    var item = arr[i];
+    if (item != null && item >= 0) {
+      result.push(item);
+    }
+  }
+
+  return result;
+}
+
+var testArray2 = [3, -2, null, 5, undefined,"Jonathan", -7, 0, 8, "Moses"];
+console.log(cleanArray(testArray2)); 
+
+
+
+                    // QUESTION 9
+
+// Part A
+
+function capitalizeWords(str) {
+  var words = str.split(" ");
+  var result = [];
+
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+    var capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+    result.push(capitalized);
+  }
+
+  return result.join(" ");
+}
+
+console.log(capitalizeWords("i am learning javascript"));
+
+
+
+// Part B
+
+function reverseCapitalization(str) {
+  var words = str.split(" ");
+  var result = [];
+
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+    var modified = word.charAt(0).toLowerCase() + word.slice(1).toUpperCase();
+    result.push(modified);
+  }
+
+  return result.join(" ");
+}
+
+console.log(reverseCapitalization("i am learning javascript"));
+
+
+
+                    // QUESTION 10
+
+
+// Part A
+
+function showMessage() {
+  var message = "Hello Moses 😎";
+  console.log(message);
+}
+
+showMessage(); 
+
+// Part B
+
+function showMessage() {
+  var message = "Hello Nkangi ✅✨!";
+  console.log(message);
+}
+
+showMessage();
+
+console.log(message); 
+
+// Why the last console.log(message) is not working?
+// Variables declared with var, let, or const inside a function only exist inside that function.
+// That’s called local scope. The variable message is invisible outside the function — like it doesn’t exist.
+
+// To make it work, we need to declare the variable outside the function, so it has global
