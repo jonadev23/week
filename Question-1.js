@@ -351,12 +351,12 @@ console.log(reverseCapitalization("i am learning javascript"));
 
 // Part A
 
-function showMessage() {
+function showMessages() {
   var message = "Hello Moses 😎";
   console.log(message);
 }
 
-showMessage(); 
+showMessages(); 
 
 // Part B
 
