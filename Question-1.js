@@ -155,7 +155,6 @@ function doubleAllValues(arr) {
 
 console.log(doubleAllValues(numbersQn5));
 
-
 // Part B
 
 function doubleEvenValues(arr) {
@@ -171,3 +170,56 @@ function doubleEvenValues(arr) {
 }
 
 console.log(doubleEvenValues(numbersQn5));
+
+
+                // QUESTION 6
+
+
+// Part A
+
+var numbersQn6 = [1, 2, 0, 10, -1, -4, -12];
+
+function checkNumberSigns(arr) {
+  let results = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+
+    if (num > 0) {
+      results.push("Positive");
+    } else if (num < 0) {
+      results.push("Negative");
+    } else {
+      results.push("Zero");
+    }
+  }
+
+  return results;
+}
+
+console.log(checkNumberSigns(numbersQn6));
+
+
+// Part B
+
+function checkNumberWithObject(arr){
+    let results = [];
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+        let result = {};
+        if (num > 0) {
+            result = "Positive";
+            } else if (num = 0) {
+                result = "Zero";
+            } else 
+                result = "Negative";
+            
+            results.push({number : num, result : result});
+        
+    }
+return results;
+}
+
+console.log(checkNumberWithObject(numbersQn6));
+
+
